@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GildedRose-Refactoring-Kata.iml" filepath="$PROJECT_DIR$/.idea/GildedRose-Refactoring-Kata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gilded-rose-kata.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gilded-rose-kata.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gilded-rose-kata.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gilded-rose-kata.test.iml" />
     </modules>
   </component>
 </project>

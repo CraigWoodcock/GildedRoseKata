@@ -44,24 +44,32 @@ class GildedRoseTest {
         }
         System.out.println();
     }
-    @DisplayName("Test output for 30 days")
+    @DisplayName("Test Sulfuras Quality After 30 Days")
     @Test
-    void testDayTwo(){
-        for (int i=0; i <= 30; i++){
-            System.out.println("Day Number: "+i+1);
-
+    void testSulfurasQualityAfter30Days(){
+        for (int i=0; i <= 30-1; i++){
         app1.updateQuality();
-        for (Item item : app1.items) {
-            System.out.println(item);
-        }}
+        }
+        if (app1.items[3].name.equals("Sulfuras, Hand of Ragnaros")){
+            Assertions.assertEquals(60,app1.items[3].quality);
+            System.out.println(app1.items[3]);
+        }
     }
 
     @Test
-     void testItem1() {
+     void testItem1_Name() {
         Item[] items = new Item[] { new Item("+5 Dexterity Vest", 0, 0) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals("+5 Dexterity Vest", app1.items[0].name);
+        assertEquals("+5 Dexterity Vest", app.items[0].name);
     }
 
+    @DisplayName("Test Aged Brie Quality After 30 Days")
+    @Test
+    void testAgedBrieQualityAfter30Days(){
+        for (int i=0; i <= 30; i++){
+            app1.updateQuality();
+        }
+        Assertions.assertEquals(50,app1.items[1].quality);
+    }
 }
